@@ -30,6 +30,7 @@ export class ResoursesComponent implements OnInit {
 
 	ngOnInit() {
 		this.updateResources();
+		console.log();
 	}
 
 }
