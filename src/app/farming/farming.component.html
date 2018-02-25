@@ -6,6 +6,6 @@
 <ul>
 	<li *ngFor="let resource of resources">
 		<span>{{ resource.name }}</span>: <span>{{ resource.amount }}</span>
+		<button (click)="incrementResource(resource.name, 1)">Farm {{ resource.name }}</button>
 	</li>
 </ul>
-<button (click)="incrementResource('wood', 1)">Farm wood</button>
