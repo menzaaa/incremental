@@ -7,7 +7,6 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
 import { AppComponent } from './app.component';
-import { ResourcesComponent } from './resources/resources.component';
 import { ResourceService } from './resource.service';
 import { FarmingComponent } from './farming/farming.component';
 
@@ -15,7 +14,6 @@ import { FarmingComponent } from './farming/farming.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ResourcesComponent,
     FarmingComponent,
   ],
   imports: [
