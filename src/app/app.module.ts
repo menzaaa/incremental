@@ -8,6 +8,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppComponent } from './app.component';
 import { ResourceService } from './resource.service';
+import { PlayerService } from './player.service';
 import { FarmingComponent } from './farming/farming.component';
 
 
@@ -21,7 +22,10 @@ import { FarmingComponent } from './farming/farming.component';
     HttpClientModule,
     // InMemoryWebApiModule
   ],
-  providers: [ ResourceService ],
+  providers: [ 
+	ResourceService,
+	PlayerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
