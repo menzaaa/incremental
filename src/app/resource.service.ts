@@ -20,23 +20,19 @@ export class ResourceService {
 	}
 
 	incrementResource(resource, amount) {
-		for (var i = 0; i < this.resources.length; ++i) {
-			if(this.resources[i].name == resource)
-				this.resources[i].amount = this.resources[i].amount + amount;
-		}
+		var objIndex = this.resources.findIndex((obj => obj.name == resource));
+		this.resources[objIndex].amount = this.resources[objIndex].amount + amount;
 	}
 
 	decrementResource(resource, amount) {
-		for (var i = 0; i < this.resources.length; ++i) {
-			if(this.resources[i].name == resource)
-				if(this.resources[i].amount >= amount){
-					this.resources[i].amount = this.resources[i].amount - amount;
-					return true;
-				}else
-				{
-					//not enough resources
-					return false;
-				}
+		var objIndex = this.resources.findIndex((obj => obj.name == resource));
+		if(this.resources[objIndex].amount >= amount){
+			this.resources[objIndex].amount = this.resources[objIndex].amount - amount;
+			return true;
+		}else
+		{
+			//not enough resources
+			return false;
 		}
 	}
 }
