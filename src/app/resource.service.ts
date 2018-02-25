@@ -26,5 +26,17 @@ export class ResourceService {
 		}
 	}
 
-
+	decrementResource(resource, amount) {
+		for (var i = 0; i < this.resources.length; ++i) {
+			if(this.resources[i].name == resource)
+				if(this.resources[i].amount >= amount){
+					this.resources[i].amount = this.resources[i].amount - amount;
+					return true;
+				}else
+				{
+					//not enough resources
+					return false;
+				}
+		}
+	}
 }

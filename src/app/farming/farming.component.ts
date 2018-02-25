@@ -12,14 +12,13 @@ import { PlayerService } from '../player.service';
 export class FarmingComponent implements OnInit {
 
 	resources: Resource[];
-	players: Player[];
+	player;
 
 	constructor(private resourceService: ResourceService, private playerService: PlayerService) { }
 
 	ngOnInit() {
 		this.resources = this.resourceService.getResources();
-		//take first player
-		this.players = this.playerService.getPlayers();
+		this.player = this.playerService.getPlayer();
 		this.updateResources();
 	}
 

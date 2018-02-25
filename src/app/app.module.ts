@@ -6,16 +6,21 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService }  from './in-memory-data.service';
 
 
+//Components
 import { AppComponent } from './app.component';
+import { FarmingComponent } from './farming/farming.component';
+import { ShopComponent } from './shop/shop.component';
+
+//Services
 import { ResourceService } from './resource.service';
 import { PlayerService } from './player.service';
-import { FarmingComponent } from './farming/farming.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FarmingComponent,
+    ShopComponent,
   ],
   imports: [
     BrowserModule,

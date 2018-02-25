@@ -11,8 +11,12 @@ export class PlayerService {
 		this.players = PLAYERS;
 	}
 
-	getPlayers(): Player[]{
-		return this.players;
+	getPlayer(){
+		return this.players[0];
+	}
+
+	incrementGold(amount) {
+		this.players[0].gold = this.players[0].gold + amount;
 	}
 
 }
