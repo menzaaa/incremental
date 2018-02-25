@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Resource } from '../resource';
 import { ResourceService } from '../resource.service';
+import { Player } from '../player';
 import { PlayerService } from '../player.service';
 
 @Component({
