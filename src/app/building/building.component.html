@@ -1,0 +1,7 @@
+<h2>Buildings</h2>
+<ul>
+  <li *ngFor="let building of buildings">
+    <span>{{ building.name }}</span>: <span>{{ building.bought }}</span>
+    <button (click)="makeBuilding(building.name)">Build {{ building.name }}</button>
+  </li>
+</ul>

@@ -14,6 +14,8 @@ import { ShopComponent } from './shop/shop.component';
 //Services
 import { ResourceService } from './resource.service';
 import { PlayerService } from './player.service';
+import { BuildingComponent } from './building/building.component';
+import {BuildingService} from './building.service';
 
 
 @NgModule({
@@ -21,15 +23,17 @@ import { PlayerService } from './player.service';
     AppComponent,
     FarmingComponent,
     ShopComponent,
+    BuildingComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     // InMemoryWebApiModule
   ],
-  providers: [ 
+  providers: [
 	ResourceService,
-	PlayerService
+	PlayerService,
+  BuildingService,
   ],
   bootstrap: [AppComponent]
 })
