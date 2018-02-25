@@ -10,7 +10,6 @@ export class ResourceService {
 	constructor() {
 		this.resources = RESOURCES;
 	}
-	//resources = RESOURCES;
 
 	getResources(): Resource[] {
 		return this.resources;
