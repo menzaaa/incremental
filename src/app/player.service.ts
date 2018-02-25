@@ -11,7 +11,7 @@ export class PlayerService {
 		this.players = PLAYERS;
 	}
 
-	getPlayers(): Players[]{
+	getPlayers(): Player[]{
 		return this.players;
 	}
 

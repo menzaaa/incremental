@@ -18,8 +18,8 @@ export class FarmingComponent implements OnInit {
 
 	ngOnInit() {
 		this.resources = this.resourceService.getResources();
-		//its a player now, just made array for future.
-		this.players = this.playerService.getPlayers()[0];
+		//take first player
+		this.players = this.playerService.getPlayers();
 		this.updateResources();
 	}
 
