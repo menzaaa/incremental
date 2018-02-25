@@ -24,6 +24,6 @@ export class BuildingComponent implements OnInit {
     this.buildingService.makeBuilding(name);
   }
 
-  
+
 
 }

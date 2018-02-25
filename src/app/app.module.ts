@@ -10,12 +10,12 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppComponent } from './app.component';
 import { FarmingComponent } from './farming/farming.component';
 import { ShopComponent } from './shop/shop.component';
+import { BuildingComponent } from './building/building.component';
 
 //Services
 import { ResourceService } from './resource.service';
 import { PlayerService } from './player.service';
-import { BuildingComponent } from './building/building.component';
-import {BuildingService} from './building.service';
+import { BuildingService } from './building.service';
 
 
 @NgModule({
