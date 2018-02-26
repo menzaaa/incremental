@@ -15,6 +15,7 @@ import { CraftingComponent } from './crafting/crafting.component';
 //Services
 import { ResourceService } from './resource.service';
 import { PlayerService } from './player.service';
+import { MaterialService } from './material.service';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { PlayerService } from './player.service';
   ],
   providers: [ 
 	ResourceService,
-	PlayerService
+	PlayerService,
+  MaterialService
   ],
   bootstrap: [AppComponent]
 })
