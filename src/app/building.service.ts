@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Building } from './building';
-import { BUILDINGS } from './mock-buildings'
+import { BUILDINGS } from './mock-buildings';
+import { ResourceService } from './resource.service';
 
 @Injectable()
 export class BuildingService {
@@ -19,11 +20,13 @@ export class BuildingService {
     this.buildings =  buildings;
   }
 
+  // TODO: add cost to build
   makeBuilding(name) {
     for (var i = 0; i < this.buildings.length; i++){
-      if(this.buildings[i].name == name)
+      if(this.buildings[i].name == name && !this.buildings[i].bought)
         this.buildings[i].bought = true;
     }
   }
+
 
 }

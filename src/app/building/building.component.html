@@ -2,6 +2,6 @@
 <ul>
   <li *ngFor="let building of buildings">
     <span>{{ building.name }}</span>: <span>{{ building.bought }}</span>
-    <button (click)="makeBuilding(building.name)">Build {{ building.name }}</button>
+    <button (click)="makeBuilding(building.name, building.resource)">Build {{ building.name }}</button>
   </li>
 </ul>
