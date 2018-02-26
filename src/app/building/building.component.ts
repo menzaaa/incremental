@@ -22,7 +22,7 @@ export class BuildingComponent implements OnInit {
     this.buildings = this.buildingService.getBuildings();
     this.player = this.playerService.getPlayer();
 
-    for (var i = 0; i < this.buildings.length; i++){
+    for (let i = 0; i < this.buildings.length; i++) {
       if(this.buildings[i].bought)
         this.autoFarm(this.buildings[i].resource);
     }

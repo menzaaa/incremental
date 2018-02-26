@@ -22,10 +22,9 @@ export class BuildingService {
 
   // TODO: add cost to build
   makeBuilding(name) {
-    for (var i = 0; i < this.buildings.length; i++){
-      if(this.buildings[i].name == name && !this.buildings[i].bought)
-        this.buildings[i].bought = true;
-    }
+    var objIndex = this.buildings.findIndex((obj => obj.name == name));
+      if(this.buildings[objIndex].name == name && !this.buildings[objIndex].bought)
+        this.buildings[objIndex].bought = true;
   }
 
 
