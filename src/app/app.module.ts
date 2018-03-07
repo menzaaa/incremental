@@ -11,11 +11,13 @@ import { AppComponent } from './app.component';
 import { FarmingComponent } from './farming/farming.component';
 import { ShopComponent } from './shop/shop.component';
 import { CraftingComponent } from './crafting/crafting.component';
+import { BuildingComponent } from './building/building.component';
 
 //Services
 import { ResourceService } from './resource.service';
 import { PlayerService } from './player.service';
 import { MaterialService } from './material.service';
+import { BuildingService } from './building.service';
 
 
 @NgModule({
@@ -24,16 +26,18 @@ import { MaterialService } from './material.service';
     FarmingComponent,
     ShopComponent,
     CraftingComponent,
+    BuildingComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     // InMemoryWebApiModule
   ],
-  providers: [ 
+  providers: [
 	ResourceService,
 	PlayerService,
-  MaterialService
+  MaterialService,
+  BuildingService,
   ],
   bootstrap: [AppComponent]
 })

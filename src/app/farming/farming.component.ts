@@ -28,7 +28,7 @@ export class FarmingComponent implements OnInit {
 
 	updateResources() {
 		setInterval(function(){
-			
+
 		}, 1000);
 	}
 }
