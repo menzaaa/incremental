@@ -45,9 +45,5 @@ export class CraftingComponent implements OnInit {
 			}
 			this.materialService.incrementMaterial(name, amount);
 		}
-
-		//console.log(this.materials[objIndex].requirements.length);
-		//if(this.resources[objIndex].amount >= amount){
-		//var objIndex = this.resources.findIndex((obj => obj.name == resource));
 	}
 }
