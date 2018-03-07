@@ -35,4 +35,8 @@ export class ResourceService {
 			return false;
 		}
 	}
+	hasResource(resource, amount) {
+		var objIndex = this.resources.findIndex((obj => obj.name == resource));
+		return (this.resources[objIndex].amount >= amount) ? true : false;
+	}
 }

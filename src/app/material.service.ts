@@ -12,8 +12,13 @@ export class MaterialService {
 		this.materials = MATERIALS;
 	}
 
-	getMaterials(){
+	getMaterials() {
 		return this.materials;
+	}
+
+	incrementMaterial(name, amount) {
+		var objIndex = this.materials.findIndex((obj => obj.name == name));
+		this.materials[objIndex].amount = this.materials[objIndex].amount + amount;
 	}
 
 }

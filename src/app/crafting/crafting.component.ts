@@ -28,4 +28,26 @@ export class CraftingComponent implements OnInit {
 		this.player = this.playerService.getPlayer();
 		this.materials = this.materialService.getMaterials();
 	}
+
+	craftMaterial(name, amount) {
+		var objIndex = this.materials.findIndex((obj => obj.name == name));
+		let canCraft = true;
+		for(let resource of this.materials[objIndex].requirements){
+			if(!this.resourceService.hasResource(resource.name, resource.amount))
+			{
+				canCraft = false;
+			}
+		}
+		if(canCraft)
+		{
+			for(let resource of this.materials[objIndex].requirements){
+				this.resourceService.decrementResource(resource.name, resource.amount);
+			}
+			this.materialService.incrementMaterial(name, amount);
+		}
+
+		//console.log(this.materials[objIndex].requirements.length);
+		//if(this.resources[objIndex].amount >= amount){
+		//var objIndex = this.resources.findIndex((obj => obj.name == resource));
+	}
 }
