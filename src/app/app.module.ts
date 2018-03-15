@@ -18,6 +18,7 @@ import { ResourceService } from './resource.service';
 import { PlayerService } from './player.service';
 import { MaterialService } from './material.service';
 import { BuildingService } from './building.service';
+import { IntervalComponent } from './interval/interval.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { BuildingService } from './building.service';
     ShopComponent,
     CraftingComponent,
     BuildingComponent,
+    IntervalComponent,
   ],
   imports: [
     BrowserModule,
