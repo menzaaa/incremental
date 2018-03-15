@@ -3,5 +3,5 @@ export class Building {
   name: string;
   resource : string;
   bought: boolean;
-  mult : number;
+  lvl : number;
 }
