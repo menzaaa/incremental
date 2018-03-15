@@ -21,25 +21,10 @@ export class BuildingComponent implements OnInit {
   ngOnInit() {
     this.buildings = this.buildingService.getBuildings();
     this.player = this.playerService.getPlayer();
-
-    for (let i = 0; i < this.buildings.length; i++) {
-      if(this.buildings[i].bought)
-        this.autoFarm(this.buildings[i].resource);
-    }
   }
 
   // TODO: add upgrades to building and autoclick multiplier
-  makeBuilding(name, resource) {
-    this.buildingService.makeBuilding(name);
-    this.autoFarm(resource);
+  createBuilding(name) {
+    this.buildingService.createBuilding(name);
   }
-
-  incrementResource(resource, amount) {
-      this.resourceService.incrementResource(resource, amount);
-  }
-
-  autoFarm(resource) {
-    setInterval(() => this.incrementResource(resource, 1), 1000);
-  }
-
 }
